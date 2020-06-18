@@ -1,0 +1,8 @@
+https://medium.com/@hananrok/debugging-hot-reloading-go-app-within-docker-container-b44d2929e8bd
+https://github.com/hanrok/godebug/blob/master/startScript.sh
+
+https://github.com/dlsniper/dockerdev/blob/compose-debug/docker-compose.yaml
+https://github.com/olivere/go-container-debugging/blob/master/docker-compose.yml
+
+https://medium.com/@kaperys/delve-into-docker-d6c92be2f823
+https://github.com/go-delve/delve/blob/master/Documentation/faq.md

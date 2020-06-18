@@ -1,0 +1,12 @@
+FROM golang:1.14-stretch
+RUN go get github.com/go-delve/delve/cmd/dlv
+WORKDIR /app
+COPY . .
+RUN go mod download
+RUN go get github.com/cespare/reflex
+COPY reflex.conf /
+EXPOSE 3000 40000
+
+COPY docker-entrypoint.sh /
+RUN ["chmod", "+x", "/docker-entrypoint.sh"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
