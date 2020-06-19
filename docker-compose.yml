@@ -12,9 +12,10 @@ services:
       - "40000:40000" # debugging endpoint
       - "3000:3000" # application endpoint
 #    command:
-#      - dlv exec --listen=:40000 --accept-multiclient --headless=true --api-version=2 --log /app
+#      - dlv debug /app --output=:/__debug_bin --listen=:40000 --accept-multiclient --headless=true --api-version=2 --log --continue
 #      - reflex -c /reflex.conf
 #      - runner -c /runner.conf
+#      - fresh
     security_opt:
       - "seccomp:unconfined"
     cap_add:

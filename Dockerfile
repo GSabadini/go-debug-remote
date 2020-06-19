@@ -2,13 +2,11 @@ FROM golang:1.14-stretch
 # FROM golang:1.14-alpine
 
 RUN go get github.com/go-delve/delve/cmd/dlv
-#    && go get github.com/pilu/fresh
 
 WORKDIR /app
 COPY . .
 
-RUN go mod download \
-    && go mod vendor
+RUN go mod download && go mod vendor
 
 #RUN go get github.com/pilu/fresh
 RUN go get github.com/cespare/reflex
@@ -20,4 +18,4 @@ EXPOSE 3000 40000
 COPY start.sh /
 
 RUN ["chmod", "+x", "/start.sh"]
-ENTRYPOINT ["/start.sh"]
+CMD ["/start.sh"]
