@@ -2,13 +2,14 @@
 
 set -e
 
-dlv debug github.com/GSabadini/go-remote-debug \
+dlv debug \
   --listen=:40000 \
-  --accept-multiclient \
   --headless=true \
-  --api-version=2 \
+  --accept-multiclient \
   --continue \
-  --log \
-  && runner -c /runner.conf
+  --api-version=2 \
+  --log
 
 exec $@
+#reflex -c /reflex.conf
+#

@@ -6,8 +6,8 @@ docker-build:
 docker-run:
 	docker run --rm -it -p 3000:3000 -p 40000:40000 --security-opt=seccomp:unconfined gsabadini/go-lang-dev:1.14
 
-up:
-	docker-compose up -d
+up-build:
+	docker-compose up -d --build
 
 down:
 	docker-compose down --remove-orphans
