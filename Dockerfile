@@ -9,6 +9,8 @@ COPY . .
 
 RUN go mod download
 
+#RUN go get github.com/githubnemo/CompileDaemon
+#ENTRYPOINT CompileDaemon -log-prefix=false -build="go build -o /app" -command="/app"
 #RUN go get github.com/cespare/reflex
 #COPY reflex.conf /
 RUN go get github.com/pilu/fresh
